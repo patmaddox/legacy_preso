@@ -162,3 +162,108 @@ Processing BoatsController#update (for 0.0.0.0 at 2009-03-15 16:59:19) [PUT]
 Redirected to http://test.host/boats/1
 Completed in 2ms (DB: 2) | 302 Found [http://test.host/boats/1?boat%5Bname%5D=SS+Minnow]
   [4;35;1mBoat Load (0.2ms)[0m   [0mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:09:35', '2009-03-16 00:09:35', NULL)[0m
+  [4;35;1mBoat Create (0.1ms)[0m   [0mINSERT INTO "boats" ("name", "created_at", "updated_at", "owner_id") VALUES('Pequod', '2009-03-16 00:09:35', '2009-03-16 00:09:35', 1)[0m
+
+
+Processing BoatsController#update (for 0.0.0.0 at 2009-03-15 17:09:35) [PUT]
+  Parameters: {"boat"=>{"name"=>"SS Minnow"}, "id"=>"1"}
+  [4;36;1mBoat Load (0.3ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Create (0.7ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:09:35', '2009-03-16 00:09:35', NULL)[0m
+  [4;36;1mBoat Create (0.3ms)[0m   [0;1mINSERT INTO "boats" ("name", "created_at", "updated_at", "owner_id") VALUES('Pequod', '2009-03-16 00:09:35', '2009-03-16 00:09:35', 1)[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:09:35', '2009-03-16 00:09:35', 't')[0m
+
+
+Processing BoatsController#update (for 0.0.0.0 at 2009-03-15 17:09:35) [PUT]
+  Parameters: {"boat"=>{"name"=>"SS Minnow"}, "id"=>"1"}
+  [4;36;1mBoat Load (0.3ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:09:35', '2009-03-16 00:09:35', NULL)[0m
+  [4;36;1mBoat Create (0.1ms)[0m   [0;1mINSERT INTO "boats" ("name", "created_at", "updated_at", "owner_id") VALUES('Pequod', '2009-03-16 00:09:35', '2009-03-16 00:09:35', 1)[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:09:35', '2009-03-16 00:09:35', NULL)[0m
+
+
+Processing BoatsController#update (for 0.0.0.0 at 2009-03-15 17:09:35) [PUT]
+  Parameters: {"boat"=>{"name"=>"SS Minnow"}, "id"=>"1"}
+  [4;36;1mBoat Load (0.2ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:10:42', '2009-03-16 00:10:42', NULL)[0m
+  [4;35;1mBoat Create (0.1ms)[0m   [0mINSERT INTO "boats" ("name", "created_at", "updated_at", "owner_id") VALUES('Pequod', '2009-03-16 00:10:42', '2009-03-16 00:10:42', 1)[0m
+
+
+Processing BoatsController#update (for 0.0.0.0 at 2009-03-15 17:10:42) [PUT]
+  Parameters: {"boat"=>{"name"=>"SS Minnow"}, "id"=>"1"}
+  [4;36;1mBoat Load (0.2ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBoat Update (0.1ms)[0m   [0mUPDATE "boats" SET "updated_at" = '2009-03-16 00:10:42', "name" = 'SS Minnow' WHERE "id" = 1[0m
+Redirected to http://test.host/boats/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/boats/1?boat%5Bname%5D=SS+Minnow]
+  [4;36;1mBoat Load (0.1ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:10:42', '2009-03-16 00:10:42', NULL)[0m
+  [4;36;1mBoat Create (0.2ms)[0m   [0;1mINSERT INTO "boats" ("name", "created_at", "updated_at", "owner_id") VALUES('Pequod', '2009-03-16 00:10:42', '2009-03-16 00:10:42', 1)[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:10:42', '2009-03-16 00:10:42', 't')[0m
+
+
+Processing BoatsController#update (for 0.0.0.0 at 2009-03-15 17:10:42) [PUT]
+  Parameters: {"boat"=>{"name"=>"SS Minnow"}, "id"=>"1"}
+  [4;36;1mBoat Load (0.3ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBoat Update (0.1ms)[0m   [0mUPDATE "boats" SET "updated_at" = '2009-03-16 00:10:42', "name" = 'SS Minnow' WHERE "id" = 1[0m
+Redirected to http://test.host/boats/1
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/boats/1?boat%5Bname%5D=SS+Minnow]
+  [4;36;1mBoat Load (0.2ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:10:42', '2009-03-16 00:10:42', NULL)[0m
+  [4;36;1mBoat Create (0.2ms)[0m   [0;1mINSERT INTO "boats" ("name", "created_at", "updated_at", "owner_id") VALUES('Pequod', '2009-03-16 00:10:42', '2009-03-16 00:10:42', 1)[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:10:42', '2009-03-16 00:10:42', NULL)[0m
+
+
+Processing BoatsController#update (for 0.0.0.0 at 2009-03-15 17:10:42) [PUT]
+  Parameters: {"boat"=>{"name"=>"SS Minnow"}, "id"=>"1"}
+  [4;36;1mBoat Load (0.2ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Redirected to #<Boat:0x23f7620>
+Filter chain halted as [:check_authorization] rendered_or_redirected.
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/boats/1?boat%5Bname%5D=SS+Minnow]
+  [4;35;1mBoat Load (0.2ms)[0m   [0mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:17:40', '2009-03-16 00:17:40', NULL)[0m
+  [4;35;1mBoat Create (0.1ms)[0m   [0mINSERT INTO "boats" ("name", "created_at", "updated_at", "owner_id") VALUES('Pequod', '2009-03-16 00:17:40', '2009-03-16 00:17:40', 1)[0m
+
+
+Processing BoatsController#update (for 0.0.0.0 at 2009-03-15 17:17:40) [PUT]
+  Parameters: {"boat"=>{"name"=>"SS Minnow"}, "id"=>"1"}
+  [4;36;1mBoat Load (0.3ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBoat Update (0.1ms)[0m   [0mUPDATE "boats" SET "updated_at" = '2009-03-16 00:17:40', "name" = 'SS Minnow' WHERE "id" = 1[0m
+Redirected to http://test.host/boats/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/boats/1?boat%5Bname%5D=SS+Minnow]
+  [4;36;1mBoat Load (0.2ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:17:40', '2009-03-16 00:17:40', NULL)[0m
+  [4;36;1mBoat Create (0.2ms)[0m   [0;1mINSERT INTO "boats" ("name", "created_at", "updated_at", "owner_id") VALUES('Pequod', '2009-03-16 00:17:40', '2009-03-16 00:17:40', 1)[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:17:40', '2009-03-16 00:17:40', 't')[0m
+
+
+Processing BoatsController#update (for 0.0.0.0 at 2009-03-15 17:17:40) [PUT]
+  Parameters: {"boat"=>{"name"=>"SS Minnow"}, "id"=>"1"}
+  [4;36;1mBoat Load (0.3ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBoat Update (0.1ms)[0m   [0mUPDATE "boats" SET "updated_at" = '2009-03-16 00:17:40', "name" = 'SS Minnow' WHERE "id" = 1[0m
+Redirected to http://test.host/boats/1
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/boats/1?boat%5Bname%5D=SS+Minnow]
+  [4;36;1mBoat Load (0.2ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:17:40', '2009-03-16 00:17:40', NULL)[0m
+  [4;36;1mBoat Create (0.1ms)[0m   [0;1mINSERT INTO "boats" ("name", "created_at", "updated_at", "owner_id") VALUES('Pequod', '2009-03-16 00:17:40', '2009-03-16 00:17:40', 1)[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "admin") VALUES('2009-03-16 00:17:40', '2009-03-16 00:17:40', NULL)[0m
+
+
+Processing BoatsController#update (for 0.0.0.0 at 2009-03-15 17:17:40) [PUT]
+  Parameters: {"boat"=>{"name"=>"SS Minnow"}, "id"=>"1"}
+  [4;36;1mBoat Load (0.2ms)[0m   [0;1mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Redirected to #<Boat:0x23f887c>
+Filter chain halted as [:check_authorization] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/boats/1?boat%5Bname%5D=SS+Minnow]
+  [4;35;1mBoat Load (0.1ms)[0m   [0mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m

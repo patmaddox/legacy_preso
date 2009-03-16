@@ -1,14 +1,18 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
-
 class ApplicationController < ActionController::Base
-  helper :all # include all helpers, all the time
-
-  # See ActionController::RequestForgeryProtection for details
-  # Uncomment the :secret if you're not using the cookie session store
-  protect_from_forgery # :secret => '34a349f0a4a2a47683f0552c16a685d4'
-  
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    @current_user ||= User.find(session[:user_id])
+  end
+  
+  def self.require_authorization(*actions)
+    actions.each do |a|
+      before_filter :check_authorization, :only => a
+    end
+  end
+  
+  def check_authorization
+    model = load_model
+    unless model.send("can_#{action_name}?", current_user)
+      redirect_to model
+    end
   end
 end

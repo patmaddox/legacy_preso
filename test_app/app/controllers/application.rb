@@ -10,9 +10,8 @@ class ApplicationController < ActionController::Base
   end
   
   def check_authorization
-    model = load_model
-    unless model.send("can_#{action_name}?", current_user)
-      redirect_to model
+    unless object.send("can_#{action_name}?", current_user)
+      redirect_to object
     end
   end
 end

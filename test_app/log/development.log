@@ -56,3 +56,91 @@ Migrating to CreateUsers (20090315232018)
   [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
   [4;35;1mSQL (3.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090315232018')[0m
   [4;36;1mSQL (2.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090315232009')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBoats (20090315232009)
+  [4;36;1mSQL (4.7ms)[0m   [0;1mCREATE TABLE "boats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "owner_id" integer, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (3.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090315232009')[0m
+Migrating to CreateUsers (20090315232018)
+  [4;36;1mSQL (4.4ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "admin" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090315232018')[0m
+Migrating to CreateAccounts (20090327221236)
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090327221236')[0m
+Migrating to CreateProjects (20090327221259)
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "account_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090327221259')[0m
+Migrating to CreateVideos (20090327221355)
+  [4;36;1mSQL (3.2ms)[0m   [0;1mCREATE TABLE "videos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "project_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090327221355')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("accounts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("boats")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("videos")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (6.2ms)[0m   [0;1mCREATE TABLE "boats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "owner_id" integer, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "account_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "admin" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "videos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "project_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090327221355')[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090315232009')[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090315232018')[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090327221236')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090327221259')[0m

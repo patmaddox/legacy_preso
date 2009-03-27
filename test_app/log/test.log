@@ -328,3 +328,124 @@ Redirected to #<Boat:0x23c6db8>
 Filter chain halted as [:check_authorization] rendered_or_redirected.
 Completed in 3ms (DB: 2) | 302 Found [http://test.host/boats/1?boat%5Bname%5D=SS+Minnow]
   [4;35;1mBoat Load (0.2ms)[0m   [0mSELECT * FROM "boats" WHERE ("boats"."id" = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:17:38) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:18:43) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (75.4ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:18:43', '2009-03-27 22:18:43')[0m
+Redirected to #<Account:0x213b0bc>
+Completed in 84ms (DB: 75) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:18:59) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:18:59', '2009-03-27 22:18:59')[0m
+Redirected to #<Account:0x2134668>
+Completed in 8ms (DB: 0) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:20:14) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:20:14', '2009-03-27 22:20:14')[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-27 22:20:14', 1, '2009-03-27 22:20:14')[0m
+Redirected to #<Account:0x2134474>
+Completed in 12ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:27:31) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:27:31', '2009-03-27 22:27:31')[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-27 22:27:31', 1, '2009-03-27 22:27:31')[0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:27:31) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:27:31', '2009-03-27 22:27:31')[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-27 22:27:31', 1, '2009-03-27 22:27:31')[0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:27:47) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:27:47', '2009-03-27 22:27:47')[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-27 22:27:47', 1, '2009-03-27 22:27:47')[0m
+  [4;36;1mVideo Create (0.2ms)[0m   [0;1mINSERT INTO "videos" ("name", "project_id", "updated_at", "created_at") VALUES('Nike''s First Video', 1, '2009-03-27 22:27:47', '2009-03-27 22:27:47')[0m
+Redirected to #<Account:0x2128e94>
+Completed in 17ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:27:47) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:27:47', '2009-03-27 22:27:47')[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-27 22:27:47', 1, '2009-03-27 22:27:47')[0m
+  [4;36;1mVideo Create (0.2ms)[0m   [0;1mINSERT INTO "videos" ("name", "project_id", "updated_at", "created_at") VALUES('Nike''s First Video', 1, '2009-03-27 22:27:47', '2009-03-27 22:27:47')[0m
+Redirected to #<Account:0x207b848>
+Completed in 10ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "videos" WHERE ("videos".project_id = 1) [0m
+  [4;36;1mVideo Load (0.3ms)[0m   [0;1mSELECT * FROM "videos" WHERE ("videos".project_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:30:00) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.8ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:30:00', '2009-03-27 22:30:00')[0m
+Redirected to #<Account:0x2129024>
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:30:17) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:30:17', '2009-03-27 22:30:17')[0m
+Redirected to #<Account:0x2129038>
+Completed in 8ms (DB: 0) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:30:33) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:30:33', '2009-03-27 22:30:33')[0m
+Redirected to #<Account:0x2129088>
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:30:47) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:30:47', '2009-03-27 22:30:47')[0m
+Redirected to #<Account:0x2129790>
+Completed in 8ms (DB: 0) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects".account_id = 1) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-27 22:31:14) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-27 22:31:14', '2009-03-27 22:31:14')[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-27 22:31:14', 1, '2009-03-27 22:31:14')[0m
+Redirected to #<Account:0x2129038>
+Completed in 13ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) [0m

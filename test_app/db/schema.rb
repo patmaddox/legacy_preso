@@ -9,7 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090315232018) do
+ActiveRecord::Schema.define(:version => 20090327221355) do
+
+  create_table "accounts", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "boats", :force => true do |t|
     t.integer  "owner_id"
@@ -18,8 +24,22 @@ ActiveRecord::Schema.define(:version => 20090315232018) do
     t.datetime "updated_at"
   end
 
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.integer  "account_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.boolean  "admin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "videos", :force => true do |t|
+    t.string   "name"
+    t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

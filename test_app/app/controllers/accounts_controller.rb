@@ -1,8 +1,8 @@
 class AccountsController < ApplicationController
 def create
-  @account = Account.new params[:account]
-  if @account.save
-    redirect_to @account
+  @registration = AccountRegistration.new params[:account]
+  if @registration.save
+    redirect_to @registration.account
   else
     render :template => "new"
   end

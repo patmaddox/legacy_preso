@@ -449,3 +449,124 @@ Completed in 13ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%
   [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" LIMIT 1[0m
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
   [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-28 06:26:36) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.8ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-28 06:26:36', '2009-03-28 06:26:36')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-28 06:26:36', 1, '2009-03-28 06:26:36')[0m
+Redirected to #<Account:0x2128e80>
+Completed in 21ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-28 06:26:36) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-28 06:26:36', '2009-03-28 06:26:36')[0m
+  [4;36;1mProject Create (0.1ms)[0m   [0;1mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-28 06:26:36', 1, '2009-03-28 06:26:36')[0m
+Redirected to #<Account:0x20a3244>
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "videos" WHERE ("videos".project_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-28 06:27:55) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-28 06:27:55', '2009-03-28 06:27:55')[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-28 06:27:55', 1, '2009-03-28 06:27:55')[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+  [4;35;1mVideo Create (0.2ms)[0m   [0mINSERT INTO "videos" ("name", "project_id", "updated_at", "created_at") VALUES('Nike''s First Video', 1, '2009-03-28 06:27:55', '2009-03-28 06:27:55')[0m
+Redirected to #<Account:0x2124c40>
+Completed in 18ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-28 06:27:55) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;35;1mAccount Create (1.8ms)[0m   [0mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-28 06:27:55', '2009-03-28 06:27:55')[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-28 06:27:55', 1, '2009-03-28 06:27:55')[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+  [4;36;1mVideo Create (0.2ms)[0m   [0;1mINSERT INTO "videos" ("name", "project_id", "updated_at", "created_at") VALUES('Nike''s First Video', 1, '2009-03-28 06:27:55', '2009-03-28 06:27:55')[0m
+Redirected to #<Account:0x206d11c>
+Completed in 13ms (DB: 3) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "videos" WHERE ("videos".project_id = 1) [0m
+  [4;36;1mVideo Load (0.2ms)[0m   [0;1mSELECT * FROM "videos" WHERE ("videos".project_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-28 06:40:43) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.7ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-28 06:40:43', '2009-03-28 06:40:43')[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-28 06:40:43', 1, '2009-03-28 06:40:43')[0m
+  [4;36;1mVideo Create (0.2ms)[0m   [0;1mINSERT INTO "videos" ("name", "project_id", "updated_at", "created_at") VALUES('Nike''s First Video', 1, '2009-03-28 06:40:43', '2009-03-28 06:40:43')[0m
+  [4;35;1mAccountRegistration Create (0.1ms)[0m   [0mINSERT INTO "account_registrations" ("updated_at", "account_id", "created_at") VALUES('2009-03-28 06:40:43', 1, '2009-03-28 06:40:43')[0m
+Redirected to #<AccountRegistration:0x21244d4>
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-28 06:40:43) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-28 06:40:43', '2009-03-28 06:40:43')[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-28 06:40:43', 1, '2009-03-28 06:40:43')[0m
+  [4;36;1mVideo Create (0.1ms)[0m   [0;1mINSERT INTO "videos" ("name", "project_id", "updated_at", "created_at") VALUES('Nike''s First Video', 1, '2009-03-28 06:40:43', '2009-03-28 06:40:43')[0m
+  [4;35;1mAccountRegistration Create (0.1ms)[0m   [0mINSERT INTO "account_registrations" ("updated_at", "account_id", "created_at") VALUES('2009-03-28 06:40:43', 1, '2009-03-28 06:40:43')[0m
+Redirected to #<AccountRegistration:0x205ea54>
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-28 06:41:38) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.6ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-28 06:41:38', '2009-03-28 06:41:38')[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-28 06:41:38', 1, '2009-03-28 06:41:38')[0m
+  [4;36;1mVideo Create (0.1ms)[0m   [0;1mINSERT INTO "videos" ("name", "project_id", "updated_at", "created_at") VALUES('Nike''s First Video', 1, '2009-03-28 06:41:38', '2009-03-28 06:41:38')[0m
+  [4;35;1mAccountRegistration Create (0.1ms)[0m   [0mINSERT INTO "account_registrations" ("updated_at", "account_id", "created_at") VALUES('2009-03-28 06:41:38', 1, '2009-03-28 06:41:38')[0m
+Redirected to #<Account:0x2100818>
+Completed in 23ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-28 06:41:38) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-28 06:41:38', '2009-03-28 06:41:38')[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-28 06:41:38', 1, '2009-03-28 06:41:38')[0m
+  [4;35;1mVideo Create (0.1ms)[0m   [0mINSERT INTO "videos" ("name", "project_id", "updated_at", "created_at") VALUES('Nike''s First Video', 1, '2009-03-28 06:41:38', '2009-03-28 06:41:38')[0m
+  [4;36;1mAccountRegistration Create (0.1ms)[0m   [0;1mINSERT INTO "account_registrations" ("updated_at", "account_id", "created_at") VALUES('2009-03-28 06:41:38', 1, '2009-03-28 06:41:38')[0m
+Redirected to #<Account:0x2052d44>
+Completed in 10ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "videos" WHERE ("videos".project_id = 1) [0m
+  [4;36;1mVideo Load (0.2ms)[0m   [0;1mSELECT * FROM "videos" WHERE ("videos".project_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-28 06:42:19) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-28 06:42:19', '2009-03-28 06:42:19')[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-28 06:42:19', 1, '2009-03-28 06:42:19')[0m
+  [4;36;1mVideo Create (0.1ms)[0m   [0;1mINSERT INTO "videos" ("name", "project_id", "updated_at", "created_at") VALUES('Nike''s First Video', 1, '2009-03-28 06:42:19', '2009-03-28 06:42:19')[0m
+  [4;35;1mAccountRegistration Create (0.1ms)[0m   [0mINSERT INTO "account_registrations" ("updated_at", "account_id", "created_at") VALUES('2009-03-28 06:42:19', 1, '2009-03-28 06:42:19')[0m
+Redirected to #<Account:0x20fff6c>
+Completed in 21ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" WHERE ("projects".account_id = 1) [0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2009-03-28 06:42:19) [POST]
+  Parameters: {"account"=>{"name"=>"Nike"}}
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("name", "updated_at", "created_at") VALUES('Nike', '2009-03-28 06:42:19', '2009-03-28 06:42:19')[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO "projects" ("name", "updated_at", "account_id", "created_at") VALUES('Nike''s First Project', '2009-03-28 06:42:19', 1, '2009-03-28 06:42:19')[0m
+  [4;35;1mVideo Create (0.1ms)[0m   [0mINSERT INTO "videos" ("name", "project_id", "updated_at", "created_at") VALUES('Nike''s First Video', 1, '2009-03-28 06:42:19', '2009-03-28 06:42:19')[0m
+  [4;36;1mAccountRegistration Create (0.1ms)[0m   [0;1mINSERT INTO "account_registrations" ("updated_at", "account_id", "created_at") VALUES('2009-03-28 06:42:19', 1, '2009-03-28 06:42:19')[0m
+Redirected to #<Account:0x2051c64>
+Completed in 10ms (DB: 1) | 302 Found [http://test.host/accounts?account%5Bname%5D=Nike]
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects".account_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "videos" WHERE ("videos".project_id = 1) [0m
+  [4;36;1mVideo Load (0.2ms)[0m   [0;1mSELECT * FROM "videos" WHERE ("videos".project_id = 1) [0m

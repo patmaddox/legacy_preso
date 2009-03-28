@@ -10,7 +10,7 @@ describe AccountsController, "POST create" do
     Account.first.should have(1).project
   end
   
-  xit "should create a video for the project" do
+  it "should create a video for the project" do
     do_post
     Account.first.projects.first.should have(1).video
   end
